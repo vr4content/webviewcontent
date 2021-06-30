@@ -25,67 +25,65 @@
 
   <!-- page style -->
   <style>
-    * {
-      scrollbar-width: thin;
-      scrollbar-color: gray;
-    }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: gray;
+  }
 
-    /* Works on Chrome, Edge, and Safari */
-    *::-webkit-scrollbar {
-      width: 10px;
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
 
-    }
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transaprent !important;
+  }
 
-    *::-webkit-scrollbar-track {
-      background: transparent;
-    }
+  *::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+    border: 1px solid darkgrey;
+  }
 
-    *::-webkit-scrollbar-thumb {
-      background-color: gray;
-      border-radius: 10px;
-      border: 0px solid gray;
-    }
+  body,
+  main::before {
+    background: url(images/ardance_bk.jpg) 0 / cover fixed;
+  }
+  main {
+
+    position: relative;
+    background: hsla(0,0%,100%,.6);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    overflow-y: scroll;
+    width: 100%;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius: 20px
+  }
+
+  main::before {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(15px);
+    z-index: -1;
+  }
 
 
-    html {
-      background: url(images/ardance_bk.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-    body {
-
-      background-color: transparent;
-      font-family: 'Lato', sans-serif !important;
-    }
-
-    .contentPanel {
-      border-radius: 20px !important;
-      backdrop-filter: blur(30px);
-      background-color: rgb(255 255 255 / 58%)!important;
-      overflow-y: scroll;
-      height: 70vh;
-      min-height: 70vh;
-    }
   </style>
 </header>
 <!-- html body -->
 
-<body class="container w-100 pt-5">
+<body class="container w-100">
 
-  <!-- page header section -->
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <a href="unity://click?action=back" class="btn btn-dark rounded-pill float-end" role="button">back</a>
-      </div>
-    </div>
-  </div>
-
-
-  <main class="shadow bg-light p-4 text-left mt-4 contentPanel rounded">
-    <h6>about us</h6>
+  <main class="text-left">
+    <h6 class="text-center mt-3">about us</h6>
     <p class="small text-center p-4" >Gauthier Dance//Dance Company Theaterhaus Stuttgart ist ein junges dynamisches Ensemble von sechzehn vielseitigen Tänzerpersönlichkeiten unter der Leitung des Choreographen, Tänzers und Musikers Eric Gauthier.</p>
     <p class="small text-center p-4" >Meet the Talents to Go ist eine Produktion von Theaterhaus Stuttgart, gefördert vom Land Baden-Württemberg. danceAR ist eine Koproduktion von Theaterhaus Stuttgart und der xailabs Gmbh, Creative Director Claudius Brodmann. Sie wird gefördert von NATIONALES PERFOR-MANCE NETZ – NPN STEPPING OUT.</p>
     <img src="images/logo.xailabs.svg" class="mx-auto d-block mt-5" alt="">
