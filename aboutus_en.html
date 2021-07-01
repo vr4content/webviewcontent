@@ -71,8 +71,15 @@
   </style>
 </header>
 <!-- html body -->
-
+<script>
+function CloseWindow() {
+  window.open('', '_self', '');
+  window.close();
+  console.log("finished");
+}
+  </script>
 <body class="container w-100 pt-5">
+
 
   <!-- page header section -->
   <div class="container">
@@ -86,7 +93,8 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <a href="unity://action?arg=back" class="btn btn-dark rounded-pill float-end" role="button">test</a>
+        <a id="myLink" href="#" onclick="CloseWindow()">link text</a>
+        <!-- <a href="unity://action?arg=back" class="btn btn-dark rounded-pill float-end" role="button">test</a> -->
       </div>
     </div>
   </div>
