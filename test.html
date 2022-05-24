@@ -1,0 +1,112 @@
+METAREAL Stage Player SDK Sample Browser
+Simple Player
+Multiple Players
+Data Explorer
+Controls
+Events Tester
+Interactive Virtual Tour
+Turntable
+Auto Gaze
+Starting View Mode
+Hide Elements
+Host side Full Screen
+Show Label
+Hide and Add Custom Welcome Screen
+Synchronized tour
+Recording and Playing Back Movement
+VIEW SAMPLE VIEW CODE
+<!--
+    The Metareal Corporation (c) 2015-2021 Metareal Inc. All right reserved
+-->
+<!DOCTYPE html>
+<head>
+</head>
+<header>
+    <script src="https://stage.metareal.com/playersdk/playersdk.min.1.0.js"></script>
+    <style>
+        .title {
+            position: absolute;
+            width: calc(100vw - 128px);
+            height: calc(64px);
+            margin-left: calc(64px);
+            margin-top: calc(32px);
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Lato',Helvetica,Arial,sans-serif;
+        }
+        .description {
+            position: absolute;
+            width: calc(100vw - 128px);
+            height: calc(64px);
+            margin-left: calc(64px);
+            margin-top: calc(64px);
+            font-family: 'Lato',Helvetica,Arial,sans-serif;
+        }
+        .webapp {
+            position: absolute;
+            width: calc(100vw - 128px);
+            height: calc(100vh - 192px);
+            margin-left: calc(64px);
+            margin-top: calc(128px);
+            background-color: black
+        }
+        #custom-welcome-screen {
+            position: relative;
+            top: 200px;
+            margin: 0 auto;
+            width: 200px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</header>
+<body>
+    <div class="title">Hide Welcome Screen and Add Custom Welcome Screen</div>
+    <div class="description">This sample shows how to hide the welcome screen and replace it with your own.</div>
+    <div class="webapp" id="myWebApp"></div>
+
+    <!-- Create the custom welcome screen -->
+    <div id="custom-welcome-screen">
+        <h1>Hello World!</h1>
+        <p>Click Ok to close the custom welcome screen.</p>
+        <button id="close-custom-welcome-screen">OK</button>
+    </div>
+
+    <script lang="javascript">
+
+    // Create the player that will be embedded inside myWebApp
+    let player = MetarealPlayerSDK.create( "myWebApp" );
+    let tourURL = "https://tour-de.metareal.com/apps/player?asset=f1781ce6-e36b-429c-9d77-cd10c7d455bd";
+
+    // Load the tour
+    player.load( tourURL, () => {
+        console.log( "Tour is loaded" );
+
+        // Set the welcome screen settings
+        player.setWelcomeScreen( {
+            play: false, /*hide the play button*/
+            welcome: false /*hide the welcome screen*/
+        } );
+
+        // Event on the close custom welcome screen button
+        let closeCustomWelcomeScreenButton = document.getElementById( "close-custom-welcome-screen" );
+        let customWelcomeScreen = document.getElementById( "custom-welcome-screen" );
+        closeCustomWelcomeScreenButton.onclick = function( event ) {
+            customWelcomeScreen.style.display = "none"; /*hide the custom welcome screen*/
+
+            // start the showcase
+            player.startShowcase( true /*skip instructions which is the default welcome screen and start*/ );
+        };
+    } );
+
+    </script>
+</body>
+
+<footer>
+    
+</footer>
+
+</html>
+The Metareal Corporation (c) 2015-2021 Metareal Inc. All right reserved

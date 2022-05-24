@@ -958,7 +958,7 @@
             </div>
         </div>
 
-    
+
     </header>
     <link rel="icon" href="https://inhaus-gmbh.de/wp-content/uploads/2019/06/cropped-favicon-1-32x32.png" sizes="32x32">
     <link rel="icon" href="https://inhaus-gmbh.de/wp-content/uploads/2019/06/cropped-favicon-1-192x192.png"
@@ -967,17 +967,17 @@
         href="https://inhaus-gmbh.de/wp-content/uploads/2019/06/cropped-favicon-1-180x180.png">
     <meta name="msapplication-TileImage"
         content="https://inhaus-gmbh.de/wp-content/uploads/2019/06/cropped-favicon-1-270x270.png">
-    
-    
-        <article class="class=" post-1084="" page="" type-page="" status-publish="" hentry""="" id="post-1084">
+
+
+    <article class="class=" post-1084="" page="" type-page="" status-publish="" hentry""="" id="post-1084">
         <h2 class="entry-title">inHaus GmbH – Lösungen für AAL &amp; Smart Home</h2>
         <section class="entry-content">
             <h1 class="has-huge-font-size h8" style="text-align: center;"><span style="color: #ffffff;">inHaus GmbH –
                     Lösungen für AAL &amp; Smart Home Smart Home</span></h1>
-    
-           
 
-            
+
+
+
             <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
             <section
                 class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-color uagb-columns__stack-mobile uagb-columns__valign-middle uagb-columns__gap-5 alignundefined uagb-block-ca90850c-0955-43bc-a3ee-e3a6f5b8dfa2">
@@ -1007,7 +1007,7 @@
                             <p></p>
                         </div>
                     </div>
-                   
+
                     <div
                         class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-02b518cf-4ba4-4430-b0a5-691047027aba">
                         <div class="uagb-column__overlay"></div>
@@ -1035,23 +1035,23 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div
                         class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-85fc136b-2c83-47fc-924b-6372e2ab1593 eds-on-scroll eds-scroll-visible animated fadeInRight duration4">
                         <div class="uagb-column__overlay">
                             <div id="myVirtualTour">
-                            <div id="custom-welcome-screen">
-                                <h1>Hello World!</h1>
-                                <p>Click Ok to close this custom welcome screen.</p>
-                                <button id="close-custom-welcome-screen">OK</button>
+                                <div id="custom-welcome-screen">
+                                    <h1>Hello!</h1>
+                                    <p>Click Ok to close this custom welcome screen.</p>
+                                    <button id="close-custom-welcome-screen">OK</button>
+                                </div>
                             </div>
-                        </div>
-                            
+
 
 
                         </div>
                         <div class="uagb-column__inner-wrap">
-                            
+
                         </div>
                     </div>
                     <div
@@ -1061,58 +1061,67 @@
                     </div>
                 </div>
             </section>
+
+
+
             <style>
-                 #custom-welcome-screen {
-                     display: none;
-            position: relative;
-            top: 200px;
-            margin: 0 auto;
-            width: 200px;
-            background-color: #ffffff;
-            border: 0px solid black;
-            padding: 0px;
-            text-align: center;
-        }
-        #myVirtualTour {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            
-            background-color: black
-        }
+                #custom-welcome-screen {
+                    position: absolute;
+                    background-color: #ffffff;
+    border: 0px solid black;
+    text-align: center;
+    width: auto;
+    height: auto;
+    
+    display: inline-block;
+    padding: 10px;
+                }
+
+                #myVirtualTour {
+                    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;            
+                }
             </style>
+
 
             <script lang="javascript">
 
                 // Create the player that will be embedded inside myWebApp
-                let player = MetarealPlayerSDK.create( "myVirtualTour" );
-                let tourURL = "https://tour.metareal.com/apps/player?asset=f1781ce6-e36b-429c-9d77-cd10c7d455bd";
-            
+                let player = MetarealPlayerSDK.create("myVirtualTour");
+                let tourURL = "https://tour-de.metareal.com/apps/player?asset=f1781ce6-e36b-429c-9d77-cd10c7d455bd";
+
                 // Load the tour
-                player.load( tourURL, () => {
-                    console.log( "Tour is loaded" );
-            
+                player.load(tourURL, () => {
+                    console.log("Tour is loaded");
+
                     // Set the welcome screen settings
-                    player.setWelcomeScreen( {
+                    player.setWelcomeScreen({
                         play: false, /*hide the play button*/
                         welcome: false /*hide the welcome screen*/
-                    } );
-            
+                    });
+
                     // Event on the close custom welcome screen button
-                    let closeCustomWelcomeScreenButton = document.getElementById( "close-custom-welcome-screen" );
-                    let customWelcomeScreen = document.getElementById( "custom-welcome-screen" );
-                    closeCustomWelcomeScreenButton.onclick = function( event ) {
+                    let closeCustomWelcomeScreenButton = document.getElementById("close-custom-welcome-screen");
+                    let customWelcomeScreen = document.getElementById("custom-welcome-screen");
+                    closeCustomWelcomeScreenButton.onclick = function (event) {
                         customWelcomeScreen.style.display = "none"; /*hide the custom welcome screen*/
-            
+
                         // start the showcase
-                        player.startShowcase( true /*skip instructions which is the default welcome screen and start*/ );
+                        player.startShowcase(true /*skip instructions which is the default welcome screen and start*/);
                     };
-                } );
-            
-                </script>
-           
-           
-          
+                });
+
+            </script>
+
+
+
             <section
                 class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-color uagb-columns__stack-mobile uagb-columns__valign-undefined uagb-columns__gap-10 alignundefined uagb-block-89ebfb10-c4d1-4fd7-b924-4ece44edda6d">
                 <div class="uagb-columns__overlay"></div>
@@ -1193,7 +1202,8 @@
                                                             style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                                                             <input type="submit" value="Nachricht Senden"
                                                                 onclick="swal(&#39;E-mail versendet!&#39;, &#39;Vielen Dank, wir melden uns bei Ihnen so schnell wie möglich&#39;, &#39;success&#39;)"
-                                                                name="submit" id="submitButton" class="" title=""></div>
+                                                                name="submit" id="submitButton" class="" title="">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </form>
@@ -1302,11 +1312,11 @@
     <div class="scroll-to-up">
         <div class="scrollup" style="display: none;"> <i class="fa fa-angle-double-up"></i></div>
     </div>
-    
+
     <script async="" src="./inhaus_files/js(1)"></script>
     <script src="./inhaus_files/sweetalert.min.js.download"></script>
     <script defer="" src="./inhaus_files/autoptimize_8dcd8331c669a9f9c22d56ce895420ae.js.download"></script>
-    
+
     <script async="" src="./inhaus_files/js(2)"></script>
     <script>
         var disableStr = 'ga-disable-UA-149682927-1';
