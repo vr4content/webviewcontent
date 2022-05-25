@@ -971,6 +971,7 @@
 
     <article class="class=" post-1084="" page="" type-page="" status-publish="" hentry""="" id="post-1084">
         <h2 class="entry-title">inHaus GmbH – Lösungen für AAL &amp; Smart Home</h2>
+
         <section class="entry-content">
             <h1 class="has-huge-font-size h8" style="text-align: center;"><span style="color: #ffffff;">inHaus GmbH –
                     Lösungen für AAL &amp; Smart Home Smart Home</span></h1>
@@ -987,8 +988,8 @@
                         class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-column__align-right uagb-block-92a2b255-45be-4494-a884-2384c4a37517">
                         <div class="uagb-column__overlay"></div>
                         <div class="uagb-column__inner-wrap">
-                            <h2 class="has-huge-font-size" style="text-align: center;">Virtual<span
-                                    style="color: #68cbef;">Tour</span></h2>
+                            <h2 class="has-huge-font-size" style="text-align: center;">(using script) Virtual<span
+                                    style="color: #68cbef;"> Tour Integration </span></h2>
                         </div>
                     </div>
                 </div>
@@ -1042,7 +1043,7 @@
                             <div id="myVirtualTour">
                                 <div id="custom-welcome-screen">
                                     <h1>Hello!</h1>
-                                    <p>Click Ok to close this custom welcome screen.</p>
+                                    <p>Click Ok to close this custom welcome screen and start the tour.</p>
                                     <button id="close-custom-welcome-screen">OK</button>
                                 </div>
                             </div>
@@ -1062,7 +1063,22 @@
                 </div>
             </section>
 
-
+ <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+            <section
+                class="wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-color uagb-columns__stack-mobile uagb-columns__valign-middle uagb-columns__gap-5 alignundefined uagb-block-ca90850c-0955-43bc-a3ee-e3a6f5b8dfa2">
+                <div class="uagb-columns__overlay"></div>
+                <div class="uagb-columns__inner-wrap uagb-columns__columns-1">
+                    <div
+                        class="wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-column__align-right uagb-block-92a2b255-45be-4494-a884-2384c4a37517">
+                        <div class="uagb-column__overlay"></div>
+                        <div class="uagb-column__inner-wrap">
+                            <h2 class="has-huge-font-size" style="text-align: center;">(using embed code) Full width code Virtual<span
+                                    style="color: #68cbef;"> Tour Integration</span></h2>
+                                    <iframe width="100%" height="500" src="https://tour-de.metareal.com/apps/player?asset=f1781ce6-e36b-429c-9d77-cd10c7d455bd&starting=tour&autostart=false" frameborder="0" allow="xr-spatial-tracking *; accelerometer *; magnetometer *; gyroscope *" allowvr="yes" allowfullscreen="yes"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <style>
                 #custom-welcome-screen {
@@ -1075,7 +1091,17 @@
     
     display: inline-block;
     padding: 10px;
+    font-family: 'Montserrat';
                 }
+                button#close-custom-welcome-screen {
+    color: white;
+    background-color: #68ccf0;
+    padding: 20px;
+    border: 0px;
+    min-width: 90px;
+    font-family: 'Montserrat';
+    font-size: large;
+}
 
                 #myVirtualTour {
                     display: flex;
